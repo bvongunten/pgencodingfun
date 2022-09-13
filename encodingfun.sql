@@ -23,7 +23,7 @@ UPDATE public."EncodingFun" SET mydata =  decode(mytext, 'escape')  where id = 1
 INSERT INTO public."EncodingFun"(id, mytext) VALUES (2,E'\u000D\u000A\u0007');
 UPDATE public."EncodingFun" SET mydata =  decode(mytext, 'escape')  where id = 2;
 
--- Some NULL character fun :)
+-- Some NUL character fun :)
 INSERT INTO public."EncodingFun"(id, mydata) VALUES (3, E'\\000\x0D\x0A\x07');
 
 
